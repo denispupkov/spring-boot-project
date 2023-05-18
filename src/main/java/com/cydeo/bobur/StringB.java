@@ -17,11 +17,11 @@ public class StringB {
 
     public static String reverseOfStringWithStockMethod(String parameterFromUser) {
         // 1-step  create our stack
-        Stack <String> ourStack = new Stack<>();
+        Stack <Character> ourStack = new Stack<>();
         // 2-step get each element of our string
         for (int i = 0; i <parameterFromUser.length() ; i++) {
             char c = parameterFromUser.charAt(i);
-            ourStack.push(String.valueOf(c));
+            ourStack.push((c));
         }
 
        // 3- step creating boulder and while loop
@@ -29,7 +29,7 @@ public class StringB {
 
 
         while (!ourStack.isEmpty()){
-            String pop = ourStack.pop();
+            Character pop = ourStack.pop();
             stringBuilder.append(pop);
         }
 
