@@ -8,20 +8,16 @@ public class ReversedStack {
     //could you use other structure instead string but at the end return string
     //hint *you might think about StringBuilder
     public static String reverseStr(String str){
-        String str2 = "";
+
+        StringBuilder sb = new StringBuilder();
 
         Stack<Character> stack = new Stack<>();
 
-        for (int i = 0; i < str.length(); i++) {
-            stack.push(str.charAt(i));
+        for (int i = 0; i < str.length(); i++) stack.push(str.charAt(i));
 
-        }
+        for (int i = 0; i < str.length(); i++) sb.append(stack.pop());
 
-        for (int i = 0; i < str.length(); i++){
-            str2 += stack.pop();
-        }
-
-        return str2;
+        return sb.toString();
 
     }
 }
